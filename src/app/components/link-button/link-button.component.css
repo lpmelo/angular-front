@@ -1,0 +1,25 @@
+.link-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+button{
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #F2F2F2;
+}
+
+button:hover{
+    transition: color 500ms;
+    font-weight: bolder;
+    color: #DE140E
+}
