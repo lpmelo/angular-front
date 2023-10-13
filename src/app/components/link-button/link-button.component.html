@@ -1,5 +1,5 @@
 <div class="link-button-container">
-    <button>
+    <button [style]="isActive()" (click)="handleClickLink()">
         <ng-content></ng-content>
     </button>
 </div>
