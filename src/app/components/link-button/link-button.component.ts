@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'link-button',
@@ -21,6 +21,12 @@ export class LinkButtonComponent {
   }
 
   constructor(private router: Router) {
-    this.currentRoute = router.url;
+    this.currentRoute = this.router.url;
+    
+    router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+      }
+    });
   }
 }
